@@ -6,15 +6,17 @@ The purpose of this API is to create, read, update and delete a student from a d
 git clone https://github.com/alisboam/studentAPI.git
 ```
 
-#### Requirements
-- PostgreSQL
+#### Running Database
+```shell
+docker run -e POSTGRES_USER=student -e POSTGRES_PASSWORD=password -e POSTGRES_DB=student -e POSTGRES_HOST_AUTH_METHOD=trust -p 5432:5432 postgres
+```
 
-#### Running
-
-```sh
-cd student
+#### Running API
+```shell
+cd studentAPI
 ./mvnw spring-boot:run
 ```
+
 ### Sample request
 
 ```shell
